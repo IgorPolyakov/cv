@@ -1,0 +1,147 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[russian,english]{babel}
+\usepackage{tabularx}
+\usepackage{hyphenat}
+\usepackage{fontawesome5}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%---------- HEADING ----------
+\begin{center}
+  \textbf{\Huge \scshape Поляков Игорь} \\ \vspace{3pt}
+    \small
+    \faAt \hspace{.5pt} \href{mailto:igorpolyakov@protonmail.com}{igorpolyakov@protonmail.com}
+    $|$
+    \faTelegram \hspace{.5pt} \href{https://t.me/hotorcelexo}{@hotorcelexo}
+    $|$
+    \faLinkedinIn \hspace{.5pt} \href{https://www.linkedin.com/in/polyakov-igor-b63497133/}{LinkedIn}
+    $|$
+    \faGithub \hspace{.5pt} \href{https://github.com/IgorPolyakov}{GitHub}
+    $|$
+    \faMapPin \hspace{.5pt} Санкт-Петербург, Россия
+\end{center}
+
+%----------- WORK EXPERIENCE -----------
+\section{Опыт работы}
+  \vspace{3pt}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Kupibilet}{Санкт-Петербург, Россия}
+      {Бэкенд разработчик}{Ноябрь 2018 \textbf{--} Июль 2023}
+      \resumeItemListStart
+          \resumeItem{Доработки по сервису аккаунта, хранение и обработка персональных данных, данных банковских карт. Стек: Go / MySQL / Iris / GORM.}
+          \resumeItem{Доработки по сервису отправки сообщений. Стек: Go / RabbitMQ / Iris. Реализована интернационализация сообщений с использованием Gobuffalo Plush.}
+          \resumeItem{Разработка с нуля информационной системы для сервиса "выбор места". Стек: Go / Gin / OpenAPI.}
+          \resumeItem{Поддержка и развитие сервиса для работы с банковскими картами, необходимый для соответствия нормам PCI DSS. Стек: Go / Mux / Redis.}
+          \resumeItem{Участие в аудите PCI DSS, внедрение инструментов безопасности, таких как Nancy, для безопасной работы с данными пользователей.}
+          \resumeItem{Доработки существующего API для бронирования и продажи авиабилетов. Стек: Ruby 2 / MongoDB 3.}
+          \resumeItem{Написание и поддержка интеграций с платежными системами (Тинькофф, Checkout.com, YooKassa, Pay2Me). Стек: Ruby / Dry-* / PSQL / Roda / ROM.}
+          \resumeItem{Подключение и работа с онлайн-кассой, создание чеков (фискальный документ). Стек: Orange Data / Ruby.}
+          \resumeItem{Добавление мониторинга и визуализации работы приложения и инфраструктуры. Стек: Prometheus / Grafana / Elasticsearch / Logstash / Kibana / Sentry.}
+          \resumeItem{Внедрение на проекте инструментов и подходов для интернационализации основного API. Стек: Rails-i18n / Lokalise.com / Weblate.org / I18n-tasks.}
+          \resumeItem{Решение задач связанных с внедрением continuous integration и continuous delivery (CI/CD), написание сценариев для статического анализа, тестирования и отправки кода на тестовые сервера. Стек: Self-hosted GitLab / Traefik / Docker / Docker-compose / HAProxy.}
+          \resumeItem{Поддержка API для генерации лендингов (SEO). Стек: Ruby 2 / Rails 5 / MongoDB 3 / Bootstrap.}
+          \resumeItem{Поддержка и развитие парсеров необходимых для бизнеса, таких как парсеры цен, IATA объектов и т.д. Стек: Ruby / Selenium / Curl.}
+          \resumeItem{Поддержка и развитие сервиса поисковых подсказок (suggest). Стек: Elixir / Cowboy.}
+          \resumeItem{Поддержка внутренних инструментов команды. Стек: Crystal / JIRA-API / GitLab-API / Slack-API.}
+        \resumeItemListEnd
+    \resumeSubheading
+      {Elecard}{Томск, Россия}
+      {Инженер-программист}{Август 2017 \textbf{--} Ноябрь 2018}
+        \resumeItemListStart
+          \resumeItem{Доработки существующего проекта Boro Elecard. Стек: Rails 4 / jQuery}
+          \resumeItem{Разработка внутреннего сервиса для генерации и управления цифровыми сертификатами (X.509). Стек: Rails 4 / OpenSSL.}
+          \resumeItem{Разработка и поддержка JRPC сервера. Стек: ruby.}
+        \resumeItemListEnd
+  \resumeSubHeadingListEnd
+%----------- EDUCATION -----------
+\section{Образование}
+  \vspace{3pt}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Томский университет систем управления и радиоэлектроники}{Томск, Россия}
+      {Автоматизация технологических процессов и производств; Вычислительных систем}{Сен. 2010 \textbf{--} Янв. 2015}
+    \resumeSubheading
+      {Институт физики прочности и материаловедения СО РАН}{Томск, Россия}
+      {Аспирантура - Информатика и вычислительная техника}{Сен. 2015 \textbf{--}  Янв. 2017}
+  \resumeSubHeadingListEnd
+%----------- SKILLS -----------
+\section{Навыки}
+\vspace{2pt}
+\resumeSubHeadingListStart
+\small{\item{
+\textbf{Языки программирования:} Go, Ruby, Elixir, SQL \vspace{3pt}
+\textbf{Технологии:} Linux, Git, Docker, PostgreSQL, MongoDB, CI/CD \vspace{3pt}
+\textbf{Языки:} Русский (родной), Английский (начальный уровень)
+}}
+\resumeSubHeadingListEnd
+
+%----------- EDUCATION (Update)-----------
+\section{Повышение квалификации, курсы}
+\vspace{2pt}
+\resumeSubHeadingListStart
+\resumeSubItem{\href{https://cert.tough-dev.school/9iEfy3ppz8G5DMLcTsqkxT/ru}{Курс «Асинхронная архитектура»}, Школа Сильных Программистов, 2022}
+\resumeSubHeadingListEnd
+\end{document}

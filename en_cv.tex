@@ -1,0 +1,147 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[russian,english]{babel}
+\usepackage{tabularx}
+\usepackage{hyphenat}
+\usepackage{fontawesome5}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%---------- HEADING ----------
+\begin{center}
+  \textbf{\Huge \scshape Igor Polyakov} \\ \vspace{3pt}
+    \small
+    \faAt \hspace{.5pt} \href{mailto:igorpolyakov@protonmail.com}{igorpolyakov@protonmail.com}
+    $|$
+    \faTelegram \hspace{.5pt} \href{https://t.me/hotorcelexo}{@hotorcelexo}
+    $|$
+    \faLinkedinIn \hspace{.5pt} \href{https://www.linkedin.com/in/polyakov-igor-b63497133/}{LinkedIn}
+    $|$
+    \faGithub \hspace{.5pt} \href{https://github.com/IgorPolyakov}{GitHub}
+    $|$
+    \faMapPin \hspace{.5pt} Saint Petersburg, Russia
+\end{center}
+
+%----------- WORK EXPERIENCE -----------
+\section{Work Experience}
+  \vspace{3pt}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Kupibilet}{Saint Petersburg, Russia}
+      {Backend Engineer}{Nov 2018 \textbf{--} Jul 2023}
+        \resumeItemListStart
+          \resumeItem{Worked on account service improvements, personal data and card data storage and processing. Stack: Go / MySQL / Iris / GORM.}
+          \resumeItem{Improved the messaging service. Stack: Go / RabbitMQ / Iris. Implemented i18n for messages using Gobuffalo Plush.}
+          \resumeItem{Developed from scratch an information system for the "seat selection" service. Stack: Go / Gin / OpenAPI.}
+          \resumeItem{Supported and developed a service for working with bank cards, necessary to comply with PCI DSS norms. Stack: Go / Mux / Redis / AES}
+          \resumeItem{Participated in PCI DSS audit, implemented security tools like Nancy for safe user data handling.}
+          \resumeItem{Developed and improved the existing API for booking and selling air tickets. Stack: Ruby 2 / MongoDB 3.}
+          \resumeItem{Implemented and supported integrations with payment systems (Tinkoff, Checkout.com, YooKassa, Pay2Me). Stack: Ruby / Dry-* / PSQL / Roda / ROM.}
+          \resumeItem{Connected and operated online cash registers, generating fiscal documents. Stack: Orange Data / Ruby.}
+          \resumeItem{Added monitoring and visualization of application and infrastructure performance, including graphs, alerts, and custom metrics. Stack: Prometheus / Grafana / Elasticsearch / Logstash / Kibana / Sentry.}
+          \resumeItem{Implemented tools and approaches for internationalization of the main API. Stack: Rails-i18n / Lokalise.com / Weblate.org / I18n-tasks.}
+          \resumeItem{Solved tasks related to the introduction of continuous integration and continuous delivery (CI/CD), writing scenarios for static analysis, testing, and deploying code to test servers. Stack: Self-hosted GitLab / Traefik / Docker / Docker-compose / HAProxy.}
+          \resumeItem{Supported the API for generating landing pages (SEO). Stack: Ruby 2 / Rails 5 / MongoDB 3 / Bootstrap.}
+          \resumeItem{Supported and developed parsers needed for business, such as price parsers, IATA objects, etc. Stack: Ruby / Selenium / Curl.}
+          \resumeItem{Supported and developed the search suggestions service (suggest). Stack: Elixir / Cowboy.}
+          \resumeItem{Supported internal tools that facilitate developers' lives. Stack: Crystal / JIRA-API / GitLab-API / Slack-API.}
+        \resumeItemListEnd
+    \resumeSubheading
+      {Elecard}{Tomsk, Russia}
+      {Software Engineer}{Aug 2017 \textbf{--} Nov 2018}
+        \resumeItemListStart
+          \resumeItem{Improvements to the existing project Boro Elecard. Stack: Rails 4 / jQuery.}
+          \resumeItem{Development of an internal service for generating and managing digital certificates (X.509). Stack: Rails 4 / OpenSSL.}
+          \resumeItem{Development and support of JRPC server. Stack: Plain Ruby.}
+        \resumeItemListEnd
+  \resumeSubHeadingListEnd
+%----------- EDUCATION -----------
+\section{Education}
+  \vspace{3pt}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Tomsk State University of Control Systems and Radioelectronics}{Tomsk, Russia}
+      {Engineer in Automation and Production (Computer Vision);   \textbf{Computer Systems}}{Sep 2010 \textbf{--} Jan 2015}
+    \resumeSubheading
+      {Institute of Strength Physics and Materials Science SB RAS}{Tomsk, Russia}
+      {Postgraduate in Computer Science and Engineering;   \textbf{Computer Science and Engineering}}{Sep 2015 \textbf{--} Jan 2017}
+  \resumeSubHeadingListEnd
+%----------- SKILLS -----------
+\section{Skills}
+\vspace{2pt}
+\resumeSubHeadingListStart
+\small{\item{
+\textbf{Programming Languages:} Go, Ruby, Elixir, SQL \vspace{3pt}
+\textbf{Technologies:} Linux, Git, Docker, PostgreSQL, MongoDB, CI/CD \vspace{3pt}
+\textbf{Languages:} Russian (Native), English (Elementary)
+}}
+\resumeSubHeadingListEnd
+
+%----------- EDUCATION (Update)-----------
+\section{Certificates}
+\vspace{2pt}
+\resumeSubHeadingListStart
+\resumeSubItem{Asynchronous Architecture Course, School of Strong Programmers, 2022}
+\resumeSubHeadingListEnd
+\end{document}

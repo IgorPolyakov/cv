@@ -1,19 +1,21 @@
 CC=pdflatex
-FILE=cv
-SOURCES=$(FILE).tex
+FILES=en_cv ru_cv
 OBJECTS=
-EXECUTABLE=$(FILE).pdf
+EXECUTABLES=$(FILES:=.pdf)
 CLEANFILES=*.aux *.blg *.out *.bbl *.bak *.log *.dvi *.toc *.synctex.gz *.fls *.fdb_latexmk img/*.pdf
 
-.FORCE: $(EXECUTABLE)
+.PHONY: all clean read_en read_ru
 
-.PHONY: clean read
+all: $(EXECUTABLES)
 
-pdf:
-	$(CC) $(SOURCES)
+%.pdf: %.tex
+	$(CC) $<
 
 clean:
 	rm -f $(CLEANFILES)
 
-read:
-	evince $(EXECUTABLE) &
+read_en:
+	evince en_cv.pdf &
+
+read_ru:
+	evince ru_cv.pdf &
